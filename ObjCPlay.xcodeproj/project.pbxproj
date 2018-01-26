@@ -12,6 +12,8 @@
 		EC5E2986201B268800EBC6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5E2984201B268800EBC6ED /* Main.storyboard */; };
 		EC5E2988201B268800EBC6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5E2987201B268800EBC6ED /* Assets.xcassets */; };
 		EC5E298B201B268800EBC6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5E2989201B268800EBC6ED /* LaunchScreen.storyboard */; };
+		EC5E2995201B26BC00EBC6ED /* Points.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5E2994201B26BC00EBC6ED /* Points.m */; };
+		EC5E2999201B360C00EBC6ED /* Forms.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5E2998201B360C00EBC6ED /* Forms.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		EC5E2987201B268800EBC6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5E298A201B268800EBC6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5E298C201B268800EBC6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5E2993201B26BC00EBC6ED /* ObjCPlay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCPlay-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC5E2994201B26BC00EBC6ED /* Points.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Points.m; sourceTree = "<group>"; };
+		EC5E2996201B26DE00EBC6ED /* Points.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Points.h; sourceTree = "<group>"; };
+		EC5E2997201B35FC00EBC6ED /* Forms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Forms.h; sourceTree = "<group>"; };
+		EC5E2998201B360C00EBC6ED /* Forms.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Forms.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 		EC5E297F201B268800EBC6ED /* ObjCPlay */ = {
 			isa = PBXGroup;
 			children = (
+				EC5E2992201B268E00EBC6ED /* Obj-C */,
 				EC5E2980201B268800EBC6ED /* AppDelegate.swift */,
 				EC5E2982201B268800EBC6ED /* ViewController.swift */,
 				EC5E2984201B268800EBC6ED /* Main.storyboard */,
@@ -62,6 +70,18 @@
 				EC5E298C201B268800EBC6ED /* Info.plist */,
 			);
 			path = ObjCPlay;
+			sourceTree = "<group>";
+		};
+		EC5E2992201B268E00EBC6ED /* Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				EC5E2996201B26DE00EBC6ED /* Points.h */,
+				EC5E2994201B26BC00EBC6ED /* Points.m */,
+				EC5E2997201B35FC00EBC6ED /* Forms.h */,
+				EC5E2998201B360C00EBC6ED /* Forms.m */,
+				EC5E2993201B26BC00EBC6ED /* ObjCPlay-Bridging-Header.h */,
+			);
+			path = "Obj-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +116,7 @@
 				TargetAttributes = {
 					EC5E297C201B268800EBC6ED = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5E2983201B268800EBC6ED /* ViewController.swift in Sources */,
+				EC5E2999201B360C00EBC6ED /* Forms.m in Sources */,
+				EC5E2995201B26BC00EBC6ED /* Points.m in Sources */,
 				EC5E2981201B268800EBC6ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,11 +297,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjCPlay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.ios.ObjCPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjCPlay/Obj-C/ObjCPlay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjCPlay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.ios.ObjCPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjCPlay/Obj-C/ObjCPlay-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
